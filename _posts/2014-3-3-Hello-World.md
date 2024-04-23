@@ -21,16 +21,16 @@ Before you begin, ensure that you have the following installed:
 
 
 ## Dockerfile(Backend)
-![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dockerDhruvin.github.io/master/images/data2.png)
+![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/master/images/data2.png)
 ## Dockerfile(Frontend)
-![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dockerDhruvin.github.io/master/images/data3.png)
+![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/master/images/data3.png)
 ## Deployment Steps
 0. *Create Network*
    - Navigate to the project directory
    - bash
      docker network create my-network
      
-     ![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dhhruuvinOnGit.github.io/master/images/2.png)
+     ![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/blob/master/images/Screenshot%202024-04-23%20114825.png)
 1. *MySQL Database:*
 
    - Navigate to the mysql directory.
@@ -39,14 +39,14 @@ Before you begin, ensure that you have the following installed:
      docker build -t mysql-image .
      
      
-     ![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dhhruuvinOnGit.github.io/master/images/1.png)
+     ![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/master/images/Screenshot%202024-04-23%20114621.png)
 
      
    - Run the MySQL container:
      bash
      docker run --name mysql-container --network=three-tier-network -p 3306:3306 -v mysql-data:/var/lib/mysql -d mysql-image
      
-     ![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dhhruuvinOnGit.github.io/master/images/3.png)
+     ![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/master/images/Screenshot%202024-04-23%20115459.png)
    - Access the MySQL container:
      bash
      docker exec -it mysql-container /bin/bash
@@ -66,12 +66,12 @@ Before you begin, ensure that you have the following installed:
      bash
      docker build -t backend .
      
-     ![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dhhruuvinOnGit.github.io/master/images/7.png)
+     ![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/blob/master/images/Screenshot%202024-04-23%20121831.png)
    - Run the backend container:
      bash
      docker run -d -p 3500:3500 --name backend-container --network=three-tier-network backend
      
-     ![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dhhruuvinOnGit.github.io/master/images/8.png)
+     ![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/master/images/Screenshot%202024-04-23%20122114.png)
 3. *Frontend Application:*
 
    - Navigate to the frontend directory.
@@ -79,7 +79,7 @@ Before you begin, ensure that you have the following installed:
      bash
      docker build -t frontend .
      
-     ![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dhhruuvinOnGit.github.io/master/images/9.png)
+     ![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/blob/master/images/Screenshot%202024-04-23%20121831.png)
    - Run the frontend container:
      bash
      docker run -d --name frontend-container --network=three-tier-network -p 80:80 frontend
