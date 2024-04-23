@@ -73,18 +73,11 @@ Before you begin, ensure that you have the following installed:
      
      ![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/master/images/Screenshot%202024-04-23%20122114.png)
 3. *Frontend Application:*
-
-   - Navigate to the frontend directory.
-   - Build the frontend Docker image:
-     bash
-     docker build -t frontend .
-     
-     ![Alt Text](https://raw.githubusercontent.com/Vshah141/Vshah141.github.io/blob/master/images/Screenshot%202024-04-23%20121831.png)
-   - Run the frontend container:
+   
+   - Similarly Navigate to the frontend directory as done in the backend directory and follow the same steps for creating frontend-directory.
      bash
      docker run -d --name frontend-container --network=three-tier-network -p 80:80 frontend
      
-     ![Alt Text](https://raw.githubusercontent.com/dhhruuvinOnGit/dhhruuvinOnGit.github.io/master/images/10.png)
 4. *Access the Application:*
 
    Open your favorite browser and visit [http://localhost:80](http://localhost:80). Enjoy exploring the MERN stack application!
